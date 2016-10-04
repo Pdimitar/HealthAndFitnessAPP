@@ -1,0 +1,355 @@
+﻿/* Sticky footer styles
+-------------------------------------------------- */
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    /* Margin bottom by footer height */
+    margin-bottom: 60px;
+    padding-top: 40px;
+    xpadding-bottom: 10px;
+}
+
+
+
+#footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    /* Set the fixed height of the footer here */
+    height: 60px;
+    background-color: #dadada;
+}
+
+.text-muted {
+    margin: 20px 0;
+}
+
+.form-login {
+    max-width: 330px;
+    padding: 0px 15px 5px 15px;
+    margin: 0 auto;
+}
+
+    .form-login .form-login-heading {
+        margin-bottom: 10px;
+    }
+
+    .form-login .form-control {
+        position: relative;
+        height: auto;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        padding: 10px;
+        font-size: 16px;
+    }
+
+        .form-login .form-control:focus {
+            z-index: 2;
+        }
+
+    .form-login input[type="password"] {
+        margin-top: 5px;
+        margin-bottom: 5px;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+    }
+
+.topRow {
+    margin-bottom: 30px;
+}
+
+
+.fixed-red-bg {
+    background: #880000;
+    border: solid 2px;
+    height: 3em;
+    width: 3em;
+    cursor: pointer;
+}
+
+.fixed-green-bg {
+    background: #008800;
+    border: solid 2px;
+    height: 3em;
+    width: 3em;
+    cursor: pointer;
+}
+
+.fixed-blue-bg {
+    background: #000088;
+    border: solid 2px;
+    height: 3em;
+    width: 3em;
+    cursor: pointer;
+}
+
+.topRow {
+    margin-bottom: 30px;
+}
+
+
+.on-drag-enter {
+    background-color: #aaaaaa;
+}
+
+.on-drag-hover:before {
+    content: 'Drop him gently';
+    display: block;
+    color: white;
+    font-size: x-large;
+    font-weight: 800;
+}
+
+.image {
+    height: 65px;
+    width: 65px;
+    position: fixed;
+    top: 84%;
+    right: 0%;
+}
+
+.cards {
+    color: #253c93;
+    text-decoration: none;
+    border-bottom: 1px dotted #253c93;
+    border-bottom: 1px solid #253c93;
+}
+
+.padding {
+    padding: 10px;
+}
+
+.navbar-inverse {
+    background-color: #101010;
+    border-color: #006687;
+}
+
+#divLoading {
+    display: none;
+}
+
+.show {
+    display: block;
+    position: fixed;
+    z-index: 100;
+    background-image: url('../../images/loader_exercise.gif');
+    background-size: 20%;
+    background-color: #EFF2F5;
+    opacity: 0.4;
+    background-repeat: no-repeat;
+    background-position: center;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    top: 0;
+}
+
+#loadinggif.show {
+    left: 50%;
+    top: 50%;
+    position: absolute;
+    z-index: 101;
+    width: 32px;
+    height: 32px;
+    margin-left: -16px;
+    margin-top: -16px;
+    background-image: url('../../images/loader_exercise.gif');
+}
+
+#load.content {
+    width: 100%;
+    height: 100%;
+}
+
+.LogInScreen {
+    background-image: url('../../images/Earned-Rest.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    height: 90vh;
+    width: 100%;
+}
+
+.mainHome {
+    background-image: url('../../images/SdX9Cib.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    display: flex;
+    align-items: stretch;
+    position: relative;
+    height: 55vh;
+    width: 100%;
+}
+
+.singUp {
+    background-image: url('../../images/Earned-Rest.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    height: 90vh;
+    width: 100%;
+}
+
+.userNameInput {
+    width: 25%;
+}
+
+/* Profile container */
+.profile {
+    margin: 20px 0;
+}
+
+/* Profile sidebar */
+.profile-sidebar {
+    padding: 20px 0 10px 0;
+    background: #fff;
+}
+
+.profile-userpic img {
+    float: none;
+    margin: 0 auto;
+    width: 200px;
+    height: 200px;
+    border-radius: 50% !important;
+}
+
+.profile-usertitle {
+    text-align: start;
+    margin-top: 20px;
+}
+
+.profile-usertitle-name {
+    color: #5a7391;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 7px;
+}
+
+.profile-usertitle-job {
+    text-transform: uppercase;
+    color: #5b9bd1;
+    font-size: 12px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.profile-userbuttons {
+    text-align: center;
+    margin-top: 10px;
+}
+
+    .profile-userbuttons .btn {
+        text-transform: uppercase;
+        font-size: 11px;
+        font-weight: 600;
+        padding: 6px 15px;
+        margin-right: 5px;
+    }
+
+        .profile-userbuttons .btn:last-child {
+            margin-right: 0px;
+        }
+
+.profile-usermenu {
+    margin-top: 30px;
+}
+
+    .profile-usermenu ul li {
+        border-bottom: 1px solid #f0f4f7;
+    }
+
+        .profile-usermenu ul li:last-child {
+            border-bottom: none;
+        }
+
+        .profile-usermenu ul li a {
+            color: #93a3b5;
+            font-size: 14px;
+            font-weight: 400;
+        }
+
+            .profile-usermenu ul li a i {
+                margin-right: 8px;
+                font-size: 14px;
+            }
+
+            .profile-usermenu ul li a:hover {
+                background-color: #fafcfd;
+                color: #5b9bd1;
+            }
+
+        .profile-usermenu ul li.active {
+            border-bottom: none;
+        }
+
+            .profile-usermenu ul li.active a {
+                color: #5b9bd1;
+                background-color: #f6f9fb;
+                border-left: 2px solid #5b9bd1;
+                margin-left: -2px;
+            }
+
+/* Profile Content */
+.profile-content {
+    padding: 20px;
+    background: #fff;
+    min-height: 460px;
+}
+
+
+.inputDesing {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #909090;
+    border-radius: 0;
+    outline: none;
+    height: 33px;
+    width: 10%;
+    font-size: 16px;
+    margin: 0 0 15px 0;
+    padding: 0;
+    box-shadow: none;
+    box-sizing: content-box;
+    transition: all .3s;
+    color: white;
+}
+
+.SungUpinputDesing {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #909090;
+    border-radius: 0;
+    outline: none;
+    height: 33px;
+    width: 10%;
+    font-size: 16px;
+    margin: 0 0 15px 0;
+    padding: 0;
+    box-shadow: none;
+    box-sizing: content-box;
+    transition: all .3s;
+    color: white;
+    width:100%;
+}
+
+.Buttoninput {
+    background-color: grey;
+    border: none;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-box-shadow: 0px 2px 0px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 0px 2px 0px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 2px 0px rgba(0, 0, 0, 0.5);
+    color: white;
+    cursor: pointer;
+    font-style: italic;
+    font-weight: 900;
+    margin: 0px 0px;
+    padding: 7px 20px;
+}

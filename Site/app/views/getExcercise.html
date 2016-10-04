@@ -1,0 +1,43 @@
+﻿<div class="container">
+
+    <div ng-if="loadIscomplited == false" class="show" id="load">
+    </div>
+    <h2>A workout scecule Created for your body type</h2>
+    <div class="col-md-3" ng-repeat="excercise in excerciseData" style="{{excercise.pictureType}}">
+        <div class="card">
+            <h3>{{excercise.day}}</h3>
+            <h4 class="card-title">{{excercise.name}}</h4>
+            <p class="card-text">{{excercise.description}}</p>
+            <img ng-click="showMmodal(excercise)" class="card-img-top" id="mo0dal" data-ng-src="data:image/;base64,{{excercise.picture}}"
+                 height="180" width="180" alt="Card image cap">
+            <div class="card-block">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h3 class="modal-title">{{excerciseIndo.name}}</h3>
+                </div>
+                <div class="modal-body">
+                    <p>{{excerciseIndo.description}}</p>
+                </div>
+                <div style="text-align:center;">
+                    <img class="card-img-top" id="mo0dal" data-ng-src="data:image/;base64,{{excerciseIndo.picture}}"
+                         height="220" width="220" alt="Card image cap">
+                </div>
+                <div>
+                    <p style="margin-left: 3%;">{{excerciseIndo.reps}}</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

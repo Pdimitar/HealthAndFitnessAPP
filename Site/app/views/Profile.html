@@ -1,0 +1,140 @@
+﻿<!--
+User Profile Sidebar by @keenthemes
+A component of Metronic Theme - #1 Selling Bootstrap 3 Admin Theme in Themeforest: http://j.mp/metronictheme
+Licensed under MIT
+-->
+
+<div class="container">
+    <div class="row profile">
+        <div class="col-md-3">
+            <div class="profile-sidebar">
+                <!-- SIDEBAR USERPIC -->
+                <div class="profile-userpic">
+                    <img ng-if="CurrentUserStats.userPicture" class="card-img-top" ng-src="data:image/;base64,{{CurrentUserStats.userPicture}}" />
+                    <img ng-if="!CurrentUserStats.userPicture" src="../../images/blank_avatar.jpg" />
+                </div>
+
+                <!-- END SIDEBAR USERPIC -->
+                <!-- SIDEBAR USER TITLE -->
+                <div class="profile-usertitle">
+                    <div class="profile-usertitle-name">
+                        {{CurrentUserStats.userName}}
+                    </div>
+                    <div class="profile-usertitle-job">
+                        {{CurrentUserStats.userGoal}}
+                    </div>
+                </div>
+                <!-- END SIDEBAR USER TITLE -->
+                <!-- SIDEBAR BUTTONS -->
+                <!-- END SIDEBAR BUTTONS -->
+                <!-- SIDEBAR MENU -->
+                <div class="profile-usermenu">
+                    <ul class="nav">
+                        <li id="overviev">
+                            <a ng-click="showUserStats()">
+                                <i class="glyphicon glyphicon-home"></i>
+                                Overview
+                            </a>
+                        </li>
+                        <li id="account">
+                            <a ng-click="accountSetings()">
+                                <i class="glyphicon glyphicon-user"></i>
+                                Account Settings
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- END MENU -->
+            </div>
+        </div>
+        <div class="col-md-9">
+            <div class="profile-content" ng-show="showAccountSetings == true">
+                <form class="form-login" role="form">
+                    <h2 class="form-login-heading">Enter Your Stats</h2>
+                    <br />
+                    Weight:
+                    <input type="number" class="form-control" placeholder="Enteer Weight" ng-model="userInfo.weight" required autofocus />
+                    <br />
+                    Height:
+                    <input type="number" class="form-control" placeholder="Enter Height" ng-model="userInfo.height" required>
+                    <br />
+                    Goal:
+                    <input type="number" class="form-control" placeholder="Enter Goal Weight" ng-model="userInfo.goalWeight" required>
+                    <br />
+                    Motivation:
+                    <input type="text" class="form-control" placeholder="Write you goal" ng-model="userInfo.userGoal" required>
+                    <br />
+
+                    <input type='file' ng-model='ChonesuserPicture' base-sixty-four-input>
+                    <img ng-show="ChonesuserPicture" ng-if="CurrentUserStats.userPicture" class="card-img-top" ng-src="data:image/;base64,{{ChonesuserPicture.base64}}" height="50" width="50" />
+                    <br />
+                    Wish
+                    <select class="form-control" ng-model="userInfo.bodyTypes">
+                        <option selected value="0">Lose Weight</option>
+                        <option value="1">Gain Weight</option>
+                    </select>
+                    <br />
+                    <button class="btn btn-sm btn-deafult btn-default" ng-if="showPosdButton == true" type="submit" data-ng-click="saveUserStats()">Save</button>
+                    <button class="btn btn-sm btn-deafult btn-default" ng-if="showEditButton == true" type="submit" data-ng-click="editUserStats()">Edit</button>
+
+                </form>
+            </div>
+            <div class="profile-content" ng-show="overView == true">
+                <br />
+                <h2>Your Progres to goal</h2>
+                <span class="col-md-5">
+                    Current Weight: {{CurrentUserStats.weight}} Kg
+                </span>
+                <span class="col-md-5 col-md-offset-2" style="padding-left: 21%;">
+                    Goal Weight:  {{CurrentUserStats.goalWeight}} Kg
+                </span>
+                <div class="progress">
+                    <div class="progress-bar progress-bar-info progress-bar-striped" role="progressbar" style="width:{{progressWeigth}}%">
+                        <span style="color:black;">{{progressWeigth}}%</span>
+                    </div>
+                </div>
+
+                <input type="number" placeholder="Current weight" ng-model="CurrentWeight" />
+                <input type="submit" ng-click="checkWeight()" value="Edit" />
+                <br />
+                <h3>Food Plan FOr The Whole Week</h3>
+                <div>
+                    <div class="col-md-3" ng-repeat="plan in FoodPlanes | unique : 'day'">
+                        <div class="card">
+                            <a ng-click="showMmodal1(plan)">
+                                <h4 class="card-title">{{plan.day}}</h4>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="container">
+    <div class="modal fade" id="foodModal" role="dialog">
+        <div class="modal-dialog">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <div class="modal-content" ng-repeat="plan in filteredData ">
+                <div>
+                    <h2>{{plan.day}}</h2>
+                </div>
+                
+                <div>
+                    <p>{{plan.foodPLan}}</p>
+                </div>
+                <div style="text-align:center;">
+                    <p style="margin-left: 3%;">{{plan.foodDescription}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
